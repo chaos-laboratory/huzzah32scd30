@@ -72,6 +72,8 @@ else:
 i2cbus = machine.SoftI2C(scl=machine.Pin(22), sda=machine.Pin(23))
 scd30 = SCD30(i2cbus, 0x61)
 
+print('ThingId', thingid)
+print('DsIDS', ds_id_d)
 
 while True:
     # Wait for sensor data to be ready to read (by default every 2 seconds)
